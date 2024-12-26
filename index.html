@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Template</title>
+    <link rel="stylesheet" href="./style.css">
+<style>
+    .animated-button {
+            background-color: #007bff;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            outline: none;
+        }
+        
+        .animated-button:hover {
+            background-color: #0056b3;
+            transform: scale(1.1);
+        }
+        
+        .animated-button:active {
+            background-color: #003d80;
+            transform: scale(0.95);
+        }
+        
+</style>
+</head>
+<body>
+    <div class="form-container">
+        <header class="form-header">
+            <h1>கிராம தொழில் வளர்ச்சி அமைப்பு</h1>
+            <p>(அரசு திட்டங்கள் மூலம் பயனாளி ஒழில்கள் மற்றும் விவசாயிகள்)</p>
+            <p>Regd No.: <span>U85100TN2022 NPL153397</span></p>
+        </header>
+
+        <form action="./save_data.php" method="post">
+            <div class="form-section">
+                <label>பதிவு எண்:</label>
+                <input type="text" name="reg_number">
+                <label>தேதி:</label>
+                <input type="date" id="date" name="date" max="<?php echo date('Y-m-d'); ?>">
+            </div>
+
+            <div class="form-section">
+                <label>உறுப்பினரின் பெயர்:</label>
+                <input type="text" name="member_name">
+
+                <label>தந்தை பெயர்:</label>
+                <input type="text" name="father_name">
+
+                <label>பாலினம்:</label>
+                <select name="gender">
+                    <option value="male">ஆண்</option>
+                    <option value="female">பெண்</option>
+                </select>
+
+                <label>முகவரி/கிராமம்:</label>
+                <textarea name="address"></textarea>
+            </div>
+
+            <div class="form-section">
+                <label>தொலைபேசி:</label>
+                <input type="text" name="phone">
+
+                <label>அஞ்சல் எண்:</label>
+                <textarea name="post_no"></textarea>
+
+                <label>குடும்ப ஆண்டு வருமானம்:</label>
+                <input type="text" name="family_income">
+
+                <label>பஞ்சாயத்து:</label>
+                <textarea name="panchayathu"></textarea>
+
+                <label>மாற்று தொழில்:</label>
+                <textarea name="addional_job"></textarea>
+
+                <label>சமுதாய சூழ்நிலை:</label>
+                <textarea name="soc_envo"></textarea>
+
+                <label>கல்வி தகுதி:</label>
+                <textarea name="ed_quli"></textarea>
+            </div>
+
+            
+            <div class="table-container">
+               
+                <table>
+                    <thead>
+                        <tr>
+                            <th>எண்</th>
+                            <th>குடும்ப உறுப்பினர்கள் விவரம்</th>
+                            <th>உறவு</th>
+                            <th>வயது</th>
+                            <th>தொழில்</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><input class="members" type="text" name="mem1"></td>
+                            <td><input class="members0" type="text" name="relative1"></td>
+                            <td><input class="members1" type="text" name="age1"></td>
+                            <td><input class="members2" type="text" name="job1"></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><input class="members" type="text" name="mem2"></td>
+                            <td><input class="members0" type="text" name="relative2"></td>
+                            <td><input class="members1" type="text" name="age2"></td>
+                            <td><input class="members2" type="text" name="job2"></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><input class="members" type="text" name="mem3"></td>
+                            <td><input class="members0" type="text" name="relative3"></td>
+                            <td><input class="members1" type="text" name="age3"></td>
+                            <td><input class="members2" type="text" name="job3"></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><input class="members" type="text" name="mem4"></td>
+                            <td><input class="members0" type="text" name="relative4"></td>
+                            <td><input class="members1" type="text" name="age4"></td>
+                            <td><input class="members2" type="text" name="job4"></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><input class="members" type="text" name="mem5"></td>
+                            <td><input class="members0" type="text" name="relative5"></td>
+                            <td><input class="members1" type="text" name="age5"></td>
+                            <td><input class="members2" type="text" name="job5"></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td><input class="members" type="text" name="mem6"></td>
+                            <td><input class="members0" type="text" name="relative6"></td>
+                            <td><input class="members1" type="text" name="age6"></td>
+                            <td><input class="members2" type="text" name="job6"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            <!-- </form> -->
+            </div>
+            <h2>விவசாயம் சார்ந்த குறிப்புகள்</h2>
+        
+                <div class="form-group">
+                    <label for="aadhaar">நிலத்தின் உரிமை</label>
+                    <input type="text" id="aadhaar" name="land_owen">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="pan">நிலத்தின் அளவு</label>
+                        <input type="text" id="pan" name="land_length">
+                    </div>
+                    <div class="form-group">
+                        <label for="pan-group">நிலத்தின் தன்மை</label>
+                        <input type="text" id="" name="land_status">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="kisan">நிலப்பதிவு எண்கள்/ குத்தகை விவரம்</label>
+                    <input type="text" id="kisan" name="land_no">
+                </div>
+             
+                <div class="form-group">
+                    <label for="bank-branch">நிப்பாசன வசதி</label>
+                    <input type="text" id="bank-branch" name="water_rich">
+                </div>
+                <div class="form-group">
+                    <label for="bank-name">பயிரிடப்படும் பயிரின் வகைகள்</label>
+                    <input type="text" id="bank-name" name="seed_type">
+                </div>
+                <div class="form-group">
+                    <label for="mgnrgs">விவசாய இயந்திரங்கள்</label>
+                    <input type="text" id="mgnrgs" name="machine">
+                </div>
+            <!-- </form> -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>வ.எண்</th>
+                        <th>கால்நடை பெயர்</th>
+                        <th>எண்ணிக்கை</th>
+                        <th>வ.எண்</th>
+                        <th>கால்நடை பெயர்</th>
+                        <th>எண்ணிக்கை</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>பசு மாடு</td>
+                        <td><input class="members0" type="text" name="cow_no"></td>
+                        <td>6</td>
+                        <td>சேவல்</td>
+                        <td><input class="members0" type="text" name="hook_no"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>காளை மாடு</td>
+                        <td><input class="members0" type="text" name="bull_no"></td>
+                        <td>7</td>
+                        <td>பெட்டை கோழி</td>
+                        <td><input class="members0" type="text" name="boxchicken_no"></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>கன்று குட்டி</td>
+                        <td><input class="members0" type="text" name="smallcow_no"></td>
+                        <td>8</td>
+                        <td>மாதம் எடுக்கும் முட்டை எண்ணிக்கை</td>
+                        <td><input class="members0" type="text" name="egg_no"></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>வெள்ளாடு</td>
+                        <td><input class="members0" type="text" name="whitesheep_no"></td>
+                        <td>பால் லிட்டர்</td>
+                        <td>காலை</td>
+                        <td><input class="members0" type="text" name="milk_mor"></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>செம்மறி ஆடு</td>
+                        <td><input class="members0" type="text" name="sheep_no"></td>
+                        <td>பால் லிட்டர்</td>
+                        <td>மாலை</td>
+                        <td><input class="members0" type="text" name="milk_eve"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="form-container">
+                <h2>உறுப்பினரிடம் வாங்கப்பட்ட கோப்புகள்</h2>
+                <!-- <form> -->
+                    <div class="form-group">
+                        <label for="aadhaar">ஆதார் எண்</label>
+                        <input type="text" id="aadhaar" name="aadhaar">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="pan">PAN</label>
+                            <input type="text" id="pan" name="pan">
+                        </div>
+                        <div class="form-group">
+                            <label for="pan-group">குடும்ப அட்டை</label>
+                            <input type="text" id="pan-group" name="ration">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="kisan">கிசான்</label>
+                        <input type="text" id="kisan" name="kissan">
+                    </div>
+                    <div class="form-group">
+                        <label for="bank-account">வங்கி கணக்கு</label>
+                        <input type="text" id="bank-account" name="bank_ac">
+                    </div>
+                    <div class="form-group">
+                        <label for="bank-branch">வங்கி கிளை</label>
+                        <input type="text" id="bank-branch" name="bank_branch">
+                    </div>
+                    <div class="form-group">
+                        <label for="bank-name">வங்கி பெயர்</label>
+                        <input type="text" id="bank-name" name="bank_name">
+                    </div>
+                    <div class="form-group">
+                        <label for="mgnrgs">MGNRGS No</label>
+                        <input type="text" id="mgnrgs" name="mgnrgs">
+                    </div>
+                <!-- </form> -->
+            </div>
+            <button class="animated-button" type="submit">Submit</button>
+
+        </form>
+        
+       
+        <!-- <footer class="form-footer">
+            <p>Page: 1</p>
+        </footer> -->
+    </div>
+    
+    </body>
+</html>

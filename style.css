@@ -1,0 +1,169 @@
+        /* styles.css */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+            color: #333;
+        }
+        
+        .form-container {
+            width: 80%;
+            max-width: 900px;
+            margin: 20px auto;
+            background: #fff;
+            /* border: 1px solid #ddd; */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .form-header h1 {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+            color: #007BFF;
+        }
+        
+        .form-header p {
+            font-size: 0.9em;
+            margin: 3px 0;
+        }
+        
+        .form-section {
+            margin-bottom: 15px;
+        }
+        
+        .form-section label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .form-section input,
+        .form-section select,
+        .form-section textarea {
+            width: 70%;
+            height: 40px;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        textarea {
+            height: 60px;
+            resize: none;
+        }
+        
+        
+        .form-footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+        /* agasdgag */
+        .table-container {
+                    width: 100%;
+                    max-width: 800px;
+                    margin: 0 auto;
+                    border: 1px solid #000;
+                    border-collapse: collapse;
+                }
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    text-align: center;
+                    font-size: 14px;
+                }
+                th, td {
+                    border: 1px solid #000;
+                    padding: 8px;
+                }
+                th {
+                    background-color: #f2f2f2;
+                    
+                }
+                .members {
+                    height: 25px;
+                    width: 250px;
+                    border: transparent;
+                    outline: none;
+                    font-size: large;
+                    /* background: #f9f9f9; */
+                }
+                .members0 {
+                    height: 25px;
+                    width: 100px;
+                    border: transparent;
+                    outline: none;
+                    font-size: large;
+                    /* background: #f9f9f9; */
+                }
+                .members1 {
+                    height: 25px;
+                    width: 80px;
+                    border: transparent;
+                    outline: none;
+                    font-size: large;
+                    /* background: #f9f9f9; */
+                }
+                .members2 {
+                    height: 25px;
+                    width: 200px;
+                    border: transparent;
+                    outline: none;
+                    font-size: large;
+                    /* background: #f9f9f9; */
+                }
+                /* part33333333333 */
+                .form-container {
+                    width: 90%;
+                    /* max-width: 600px; */
+                    background-color: #fff;
+                    padding: 20px;
+                    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                    border-radius: 8px;
+                }
+                .form-container h2 {
+                    margin-bottom: 20px;
+                    text-align: center;
+                    font-size: 18px;
+                }
+                .form-group {
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 15px;
+                }
+                .form-group label {
+                    margin-bottom: 5px;
+                    font-weight: bold;
+                }
+                .form-group input {
+                    padding: 10px;
+                    font-size: 14px;
+                    border: 1px solid #ddd;
+                    border-radius: 4px;
+                    height: 40px;
+                }
+                .form-row {
+                    display: flex;
+                    gap: 10px;
+                }
+                .form-row .form-group {
+                    flex: 1;
+                }
+        
+                /* Responsive Styles */
+                @media screen and (max-width: 600px) {
+                    .form-row {
+                        flex-direction: column;
+                    }
+                }
+               
+        
